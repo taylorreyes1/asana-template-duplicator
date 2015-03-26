@@ -18,7 +18,7 @@ def duplicate_template_for_student():
 	username = driver.find_element_by_name('Email')
 	passwd = driver.find_element_by_name('Passwd')
 
-	username.send_keys('geoff.boss@hackreactor.com')
+	username.send_keys('geoff.boss@hackreactor.com')	
 	get_passwd = raw_input('Please provide your password: ')
 
 	passwd.send_keys(get_passwd)
@@ -39,7 +39,7 @@ def duplicate_template_for_student():
 				student_name_field.send_keys(row['Name'])
 				driver.find_element_by_id('duplicate_object_dialog_submit').click()
 				print 'creating user: ' + row['Name']
-				driver.implicitly_wait(5)						
+				driver.implicitly_wait(12)						
 
 	print 'we hit the end of the loop'
 	driver.implicitly_wait(15)
