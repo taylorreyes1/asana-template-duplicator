@@ -3,7 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import csv
 
-# TODO: Handle error handling for password input
+
 def _switch_tabs(driver):
 	for handle in driver.window_handles:
 	    driver.switch_to_window(handle)
@@ -17,6 +17,33 @@ def _check_completion_status():
 		finished = raw_input('Have the projects finished duplicating? (Y/N): ')
 
 
+# TODO: Handle error handling for password input
+def _check_for_page_timeout(driver):
+	error_check = driver.find_element_by_id('error_message_box')
+	if not error_check:
+		print 'greenlight'
+	
+
+def _digest_csv_data(driver):
+	with open('testing_new_names.csv') as csvfile:
+		print 'in the open'
+		reader = csv.DictReader(csvfile)
+		for row in reader:
+			if len(row['Name']) > 5:				
+				driver.implicitly_wait(60)
+				driver.find_element_by_id('pot_action_menu').click()
+				driver.find_element_by_id('duplicate_project').click() 
+				student_name_field = driver.find_element_by_id('duplicate_object_name_input')
+				student_name_field.send_keys(row['Name'])
+				driver.find_element_by_id('duplicate_object_dialog_submit').click()
+				print 'creating user: ' + row['Name']
+				driver.implicitly_wait(60)			
+				_check_for_page_timeout(driver)							
+	
+	driver.implicitly_wait(60)
+	_check_completion_status()
+
+
 def _duplicate_template_for_student():
 	# This should be the url of the opened project for duplication
 	get_url = raw_input('Please provide the url where the projects will live: ')
@@ -27,7 +54,7 @@ def _duplicate_template_for_student():
 	_switch_tabs(driver)	
 
 	username = driver.find_element_by_name('Email')	
-
+	
 	username.send_keys('geoff.boss@hackreactor.com')	
 	driver.find_element_by_id('next').click()
 
@@ -38,24 +65,9 @@ def _duplicate_template_for_student():
 	print 'we are logging in'
 
 	_switch_tabs(driver)		
+	_digest_csv_data(driver)
 
-	with open('testing_new_names.csv') as csvfile:
-		print 'in the open'
-		reader = csv.DictReader(csvfile)
-		for row in reader:
-			if len(row['Name']) > 5:				
-				driver.implicitly_wait(40)
-				driver.find_element_by_id('pot_action_menu').click()
-				driver.find_element_by_id('duplicate_project').click() 
-				student_name_field = driver.find_element_by_id('duplicate_object_name_input')
-				student_name_field.send_keys(row['Name'])
-				driver.find_element_by_id('duplicate_object_dialog_submit').click()
-				print 'creating user: ' + row['Name']
-				driver.implicitly_wait(40)										
-	
-	driver.implicitly_wait(60)
-	_check_completion_status()
-	
+
 if __name__ == '__main__':
 	try:
 		_duplicate_template_for_student()	
