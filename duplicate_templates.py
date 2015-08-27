@@ -17,7 +17,7 @@ def _check_completion_status(driver):
 		finished = raw_input('Have the projects finished duplicating? (Y/N): ')
 
 
-# TODO: Handle error handling for password input
+# TODO: Handle errors for asana page timeout/input errors
 def _check_for_page_timeout(driver):
 	error_check = driver.find_element_by_id('error_message_box')
 	if not error_check:
