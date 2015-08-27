@@ -9,7 +9,7 @@ def _switch_tabs(driver):
 	    driver.switch_to_window(handle)
 
 
-def _check_completion_status():
+def _check_completion_status(driver):
 	finished = raw_input('Have the projects finished duplicating? (Y/N): ')	
 	if finished.lower() == 'y':	
 		driver.close()
@@ -25,7 +25,8 @@ def _check_for_page_timeout(driver):
 	
 
 def _digest_csv_data(driver):
-	with open('testing_new_names.csv') as csvfile:
+	file_to_open = raw_input('Please provide the full name of the file: ')	
+	with open(file_to_open) as csvfile:
 		print 'in the open'
 		reader = csv.DictReader(csvfile)
 		for row in reader:
@@ -41,7 +42,7 @@ def _digest_csv_data(driver):
 				# _check_for_page_timeout(driver)							
 	
 	driver.implicitly_wait(60)
-	_check_completion_status()
+	_check_completion_status(driver)
 
 
 def _duplicate_template_for_student():
@@ -53,9 +54,9 @@ def _duplicate_template_for_student():
 
 	_switch_tabs(driver)	
 
+	get_user_name = raw_input('Please provide your username (email address): ')
 	username = driver.find_element_by_name('Email')	
-	
-	username.send_keys('geoff.boss@hackreactor.com')	
+	username.send_keys(get_user_name)	
 	driver.find_element_by_id('next').click()
 
 	get_passwd = raw_input('Please provide your password: ')
