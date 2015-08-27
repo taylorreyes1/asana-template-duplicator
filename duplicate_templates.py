@@ -38,7 +38,7 @@ def _digest_csv_data(driver):
 				driver.find_element_by_id('duplicate_object_dialog_submit').click()
 				print 'creating user: ' + row['Name']
 				driver.implicitly_wait(60)			
-				_check_for_page_timeout(driver)							
+				# _check_for_page_timeout(driver)							
 	
 	driver.implicitly_wait(60)
 	_check_completion_status()
@@ -69,9 +69,8 @@ def _duplicate_template_for_student():
 
 
 if __name__ == '__main__':
-	try:
-		_duplicate_template_for_student()	
-	except Exception, e:
-		print e	
+	_duplicate_template_for_student()	
+else:	
+	print 'These methods are private'
 
 
