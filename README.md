@@ -22,7 +22,7 @@ It requires a few command line inputs from the user in order to properly duplica
 ##Running
 
 From the command line run:
-`python duplicate_templates.py`
+`python create_asana_projects.py`
 
 ##Use Case
 * You have a mundane or repetitive task that requires the duplication of a specific Asana template.
