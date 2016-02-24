@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # Modify the text of this file such that it meets your requirements
+
 followers = ['geoff.boss@hackreactor.com', 'zaina.natour@hackreactor.com', 'marlene.tang@hackreactor.com', 'margot.weber@hackreactor.com', 'michelle.miller@hackreactor.com', 'ruan@hackreactor.com', 'nick@hackreactor.com', 'caroline@hackreactor.com', 'erin.freeny@hackreactor.com', 'tara.mclauchlan@hackreactor.com', 'shawn@hackreactor.com', 'pamela.greenberg@hackreactor.com', 'stephen.wu@hackreactor.com', 'jira.vinyoopongphan@hackreactor.com', 'justin.mancherje@hackreactor.com']
+
 # instructions
 instructions = """ If you have an urgent concern, call your respective Job Search Mentor, either Marlene (408-839-0360), Margot (610-585-7688), Geoff (818-903-1913) or Zaina (434-221-6133).
 
