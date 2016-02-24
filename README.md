@@ -3,9 +3,12 @@ It requires a csv with names from which it will duplicate the parent template.
 
 ##Setup
 
-Install requirements
+Install requirements:
 
 `pip install requirements.txt`
+
+You will need to aquire your own personal access token. You can do so here: https://app.asana.com/-/account_api
+Be sure to replace 'personal_access_token' in 'create_asana_projects.py' with your personal access token.
 
 ##Required 
 A CSV file with a column titled 'Name' and 'Email. This can be made more modular later.
@@ -34,5 +37,5 @@ From the command line run:
 * Each student will have their very own Job Search project in Asana!
 
 ##TODO
-* Handle Asana timeout/erros gracefully
+* Handle Asana timeout/errors gracefully
 
