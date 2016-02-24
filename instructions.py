@@ -6,7 +6,7 @@ followers = ['geoff.boss@hackreactor.com', 'zaina.natour@hackreactor.com', 'marl
 # instructions
 instructions = """ If you have an urgent concern, call your respective Job Search Mentor, either Marlene (408-839-0360), Margot (610-585-7688), Geoff (818-903-1913) or Zaina (434-221-6133).
 
-1. CREATING COMPANIES AS "TASKS"
+1. CREATING COMPANIES AS TASKS
 Add companies you plan to apply to or have applied to by hitting the "add task" button at the top of your "project" or by placing the cursor in the name of the section you want the company to go in and hitting "return/enter". 
 
 2. NEW COMPANIES
