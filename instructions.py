@@ -6,23 +6,26 @@ followers = ['geoff.boss@hackreactor.com', 'zaina.natour@hackreactor.com', 'marl
 # instructions
 instructions = """ If you have an urgent concern, call your respective Job Search Mentor, either Marlene (408-839-0360), Margot (610-585-7688), Geoff (818-903-1913) or Zaina (434-221-6133).
 
-1. NEW COMPANIES
+1. CREATING COMPANIES AS "TASKS"
+Add companies you plan to apply to or have applied to by hitting the "add task" button at the top of your "project" or by placing the cursor in the name of the section you want the company to go in and hitting "return/enter". 
+
+2. NEW COMPANIES
 Add new companies as leads. Use description area of the task for notes about the company/position and links to job descriptions.
 
-2. TRACKING PROGRESS
+3. TRACKING PROGRESS
 As you move through stages with a company, move the company into the appropriate section. Make sure to distinguish between the "Scheduled" and "Completed" sections for interviews and challenges.
 
 Please update progress at least daily in the comments section of each company's task.  
 
-3. CONCLUDED CONVERSATIONS
+4. CONCLUDED CONVERSATIONS
 If a company turns you down, check them off as complete and leave them in the section of your Asana that corresponds to how far you got in the interview process. Should you decide not to move forward with a company, move them into the graveyard section. 
 
 In both cases, it is useful to record notes that could allow us to help diagnose problems and better target your search.
 
-4. OFFERS
+5. OFFERS
 When you get an offer, please upload any details or written offers to your corresponding asana project and e-mail outcomes@hackreactor.com and let the team know the terms of your offer. Do not accept, decline, negotiate or make any commitments prior to notifying the Student Outcomes Team.
 
-5. QUESTIONS AND COMMUNICATIONS
+6. QUESTIONS AND COMMUNICATIONS
 Questions regarding hiring partners, connections with alums at companies, and about offers received should be directed to outcomes@hackreactor.com during the course of your search. Questions regarding the mechanics of your job search, issues you are having during or preparing for interviews, or general questions or concerns regarding your job search should also be directed to outcomes@hackreactor.com. """
 
 
