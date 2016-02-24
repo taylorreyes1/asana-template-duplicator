@@ -8,7 +8,8 @@ Install requirements:
 `pip install requirements.txt`
 
 You will need to aquire your own personal access token. You can do so here: https://app.asana.com/-/account_api
-Be sure to replace 'personal_access_token' in 'create_asana_projects.py' with your personal access token.
+
+Be sure to replace `personal_access_token` in `create_asana_projects.py` with your personal access token.
 
 ##Required 
 A CSV file with a column titled 'Name' and 'Email. This can be made more modular later.
