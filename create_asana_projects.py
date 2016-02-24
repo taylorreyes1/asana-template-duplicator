@@ -1,11 +1,11 @@
 import asana
 import csv
 from instructions import followers, instructions, hired, scheduling
-from dev import private_access_token
+# from dev import personal_access_token
 
 TASKS = ['Graveyard (**ONLY IF YOU REJECT COMPANY"" ELSE MARK COMPLETE):', 'Leads:', 'Applied:', 'Phone Screen Scheduled:', 'Phone Screen Completed:', 'Technical Screen Scheduled:', 'Technical Screen Completed:', 'Coding Challenge Recieved:', 'Coding Challenge Completed:', 'On-Site Interview Scheduled:', 'On-Site Interview Completed:', 'Offers Received:', 'Scheduling Technical Interview Practice Sessions', 'Getting Started on Hired.com', '$$Instructions - Do Not Modify or Delete', 'Working Area (NOT Companies):',]
 
-client = asana.Client.access_token(private_access_token)
+client = asana.Client.access_token(personal_access_token)
 me = client.users.me()
 
 # Grab workspace id for Reactor Education Group
